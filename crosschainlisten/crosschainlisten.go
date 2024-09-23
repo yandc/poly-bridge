@@ -20,7 +20,6 @@ package crosschainlisten
 import (
 	"encoding/json"
 	"fmt"
-	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"math"
 	"poly-bridge/cacheRedis"
 	"poly-bridge/common"
@@ -37,7 +36,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/polynetwork/bridge-common/metrics"
+	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
+
 	"poly-bridge/basedef"
 	"poly-bridge/conf"
 	"poly-bridge/crosschaindao"
@@ -49,6 +49,8 @@ import (
 	"poly-bridge/crosschainlisten/polylisten"
 	"poly-bridge/crosschainlisten/switcheolisten"
 	"poly-bridge/models"
+
+	"github.com/polynetwork/bridge-common/metrics"
 
 	"github.com/beego/beego/v2/core/logs"
 )

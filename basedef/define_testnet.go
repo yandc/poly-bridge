@@ -23,7 +23,7 @@ package basedef
 const (
 	POLY_CROSSCHAIN_ID       = uint64(0)
 	BTC_CROSSCHAIN_ID        = uint64(1)
-	ETHEREUM_CROSSCHAIN_ID   = uint64(2)
+	ETHEREUM_CROSSCHAIN_ID   = uint64(602)
 	ONT_CROSSCHAIN_ID        = uint64(3)
 	NEO_CROSSCHAIN_ID        = uint64(5)
 	HECO_CROSSCHAIN_ID       = uint64(7)

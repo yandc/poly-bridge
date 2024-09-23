@@ -25,7 +25,6 @@ import (
 	"runtime"
 	"syscall"
 
-	"github.com/polynetwork/bridge-common/metrics"
 	"poly-bridge/activity"
 	"poly-bridge/basedef"
 	"poly-bridge/chainfeelisten"
@@ -35,6 +34,8 @@ import (
 	"poly-bridge/crosschaineffect"
 	"poly-bridge/crosschainlisten"
 	"poly-bridge/crosschainstats"
+
+	"github.com/polynetwork/bridge-common/metrics"
 
 	"github.com/beego/beego/v2/core/logs"
 	"github.com/beego/beego/v2/server/web"
@@ -100,7 +101,7 @@ func startServer(ctx *cli.Context) {
 	}
 	crosschainlisten.StartCrossChainListen(config)
 	coinpricelisten.StartCoinPriceListen(config.Server, config.CoinPriceUpdateSlot, config.CoinPriceListenConfig, config.DBConfig)
-	chainfeelisten.StartFeeListen(config.Server, config.FeeUpdateSlot, config.FeeListenConfig, config.DBConfig)
+	//chainfeelisten.StartFeeListen(config.Server, config.FeeUpdateSlot, config.FeeListenConfig, config.DBConfig)
 	crosschaineffect.StartCrossChainEffect(config.Server, config.EventEffectConfig, config.DBConfig, config.RedisConfig)
 	crosschainstats.StartCrossChainStats(config.Server, config.StatsConfig, config.DBConfig, config.IPPortConfig, config.ChainListenConfig)
 	activity.StartActivity(config.Server, config.ActivityConfig, config.DBConfig)
